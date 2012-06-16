@@ -99,3 +99,7 @@ do.times() {
        error "Positive integer expected as first argument"
    fi
 }
+
+is_os_x() {
+    [ -x /usr/bin/sw_vers ]
+}
