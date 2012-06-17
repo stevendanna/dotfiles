@@ -1,6 +1,7 @@
 #Various Bash Functions to make life easier.
 
 
+# From: http://unix.stackexchange.com/questions/11856/sort-but-keep-header-line-in-the-at-the-top
 # print the header (the first line of input)
 # and then run the specified command on the body (the rest of the input)
 # use it in a pipeline, e.g. ps | body grep somepattern
