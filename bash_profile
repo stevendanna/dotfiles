@@ -5,6 +5,11 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+# OS X Completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 # Custom Completions
 if [ -d ~/.bash_completion.d ]; then
     . ~/.bash_completion.d
