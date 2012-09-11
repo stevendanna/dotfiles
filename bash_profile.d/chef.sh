@@ -19,5 +19,5 @@ KNIFE_EC2() {
 }
 
 OC() {
-    $OPENCOMMAND http://tickets.opscode.com/browse/KNIFE_EC2-$1
+    $OPENCOMMAND http://tickets.corp.opscode.com/browse/OC-$1
 }
