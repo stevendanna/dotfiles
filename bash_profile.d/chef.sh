@@ -18,6 +18,10 @@ KNIFE_EC2() {
     $OPENCOMMAND http://tickets.opscode.com/browse/KNIFE_EC2-$1
 }
 
+COOK() {
+    $OPENCOMMAND http://tickets.opscode.com/browse/COOK-$1
+}
+
 OC() {
     $OPENCOMMAND http://tickets.corp.opscode.com/browse/OC-$1
 }
