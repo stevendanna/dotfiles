@@ -1,5 +1,8 @@
 # Command Prompt
 PROMPT_TYPE="full"
+if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ];then
+    source /usr/share/git-core/contrib/completion/git-prompt.sh
+fi
 
 prompt_command_function () {
     # Command prompt that mimics grml's zsh prompt.
