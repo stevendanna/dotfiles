@@ -6,8 +6,8 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # OS X Completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+if command -v brew >/dev/null && [ -f $(brew --prefix)/etc/bash_completion ]; then
+   . $(brew --prefix)/etc/bash_completion
 fi
 
 # Custom Completions
