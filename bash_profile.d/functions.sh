@@ -104,3 +104,26 @@ do.times() {
 is_os_x() {
     [ -x /usr/bin/sw_vers ]
 }
+
+# Open given RFC in less
+rfc() {
+    if [ ! -z $1 ]; then
+        mkdir -p $HOME/.rfc_cache
+        cached_file="$HOME/.rfc_cache/rfc${1}.txt"
+        if [ ! -e $cached_file ]; then
+            curl -s "https://www.rfc-editor.org/rfc/rfc$1.txt" > "$cached_file"
+        fi
+        cat "$cached_file"
+    else
+        cat ~/.rfc_cache/rfc-index.txt
+    fi
+}
+
+rfcsearch() {
+    rfc | grep -E "^[0-9]{4} " | grep "$1"
+}
+
+# No rot13 on OSX.
+rot13() {
+    echo "$1" | tr a-zA-Z n-za-mN-ZA-M
+}
