@@ -115,7 +115,12 @@ rfc() {
         fi
         cat "$cached_file"
     else
-        cat ~/.rfc_cache/rfc-index.txt
+        index_file=$HOME/.rfc_cache/rfc-index.txt
+        if [ ! -e $index_file ]; then
+            mkdir -p $HOME/.rfc_cache
+            curl -s "http://www.ietf.org/download/rfc-index.txt" > "$index_file"
+        fi
+        cat "$index_file"
     fi
 }
 
