@@ -9,5 +9,6 @@ alias no_blanks='sed "/^$/d"'
 
 # OS X
 if is_os_x; then
-    alias emacsclient="/usr/local/Cellar/emacs/HEAD/bin/emacsclient"
+    EC=$(grealpath $(which emacsclient))
+    alias emacsclient="$EC"
 fi
