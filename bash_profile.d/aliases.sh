@@ -9,6 +9,7 @@ alias no_blanks='sed "/^$/d"'
 
 # OS X
 if is_os_x; then
+    alias pass="reattach-to-user-namespace pass"
     EC=$(grealpath $(which emacsclient))
     alias emacsclient="$EC"
 fi
