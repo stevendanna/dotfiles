@@ -1,0 +1,37 @@
+# Much taken from https://github.com/garybernhardt/dotfiles/
+[user]
+	name = Steven Danna
+	email = steve@opscode.com
+[core]
+	editor = emacsclient
+[diff]
+[color]
+    ui = auto
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    di = diff
+    dc = diff --cached
+    amend = commit --amend
+    aa = add --all
+    head = !git l -1
+    h = !git head
+    r = !git l -20
+    ra = !git r --all
+    ff = merge --ff-only
+    pullff = pull --ff-only
+    noff = merge --no-ff
+    l = "!source ~/.githelpers && pretty_git_log"
+    la = !git l --all
+    fa = fetch --all
+    pom = push origin master
+    b = branch
+    ds = diff --stat
+    dh1 = diff HEAD~1
+[sendemail]
+	smtpencryption = tls
+	smtpserverport = 587
+	smtpuser = steve@opscode.com
+	smtpserver = smtp.gmail.com
+	chainreplyto = false
