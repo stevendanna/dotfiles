@@ -1,4 +1,5 @@
 source ~/.bash_profile.d/functions.sh
+export PATH=/opt/chefdk/embedded/bin:$PATH
 
 if is_os_x; then
     OPENCOMMAND="open"
