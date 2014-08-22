@@ -1,4 +1,5 @@
 source ~/.bash_profile.d/functions.sh
+source ~/.bash_profile.d/env.sh
 
 alias be='bundle exec'
 alias bi='bundle install'
