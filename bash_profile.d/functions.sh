@@ -132,3 +132,18 @@ rfcsearch() {
 rot13() {
     echo "$1" | tr a-zA-Z n-za-mN-ZA-M
 }
+
+save-last-command() {
+    last_command=$(fc -nl 0)
+    command_name="$1"
+    read -r -d '' new_fun <<EOF
+${command_name}() {
+$last_command
+}
+EOF
+    eval "$new_fun"
+}
+
+gotosrc () {
+    cd $(find ~/src ~/oc/code/opscode ~/oc/code/opscode-cookbooks -maxdepth 1 -type d | selecta)
+}
